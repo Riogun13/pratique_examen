@@ -9,11 +9,13 @@ public class avancer : MonoBehaviour {
     [SerializeField] public float pointForce = 2;
     // Use this for initialization
     void Start () {
-        avionRigidBody = GetComponent<Rigidbody>();
+        avionRigidBody = GetComponent<Rigidbody>(); // utiliser et retrouver un component d'un gameobject
+
+        //respawns = GameObject.FindGameObjectsWithTag("Respawn"); /utiliser un tag
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         ManageInputVertivcal();
         ManageInputHorizontal();
     }
